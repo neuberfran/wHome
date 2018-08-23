@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "721927399999",
+    "firebase_url": "https://test-f109d.firebaseio.com",
+    "project_id": "test-f109d",
+    "storage_bucket": "test-f109d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721927399999:android:dd99139dbe5f180f",
+        "android_client_info": {
+          "package_name": "neuberfran.com.whome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721927399999-iileho0a37b5bhk2p8b9k5erk7bpflam.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFAPC_VhY7Wi_jNcVUnS5udH3MsyUdJMs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
