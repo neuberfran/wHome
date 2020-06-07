@@ -1,36 +1,44 @@
 apply plugin: 'com.android.application'
 
+apply plugin: 'kotlin-kapt'
+
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
+  //  buildToolsVersion '28.0.2'
+
     defaultConfig {
-        applicationId "neuberfran.com.whome"
-        minSdkVersion 'P'
-        targetSdkVersion 27
+        applicationId 'neuberfran.com.whome'
+        minSdkVersion 27
+        targetSdkVersion 28
         versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        versionName '1.0'
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
 }
 
 ext.arch_version = '1.1.1'
 ext.dagger_version = '2.15'
-ext.gms_version = '12.0.1'
+ext.gms_version = '16.0.1'
 ext.support_version = '27.1.1'
 
 dependencies {
     compileOnly 'com.google.android.things:androidthings:1.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.google.firebase:firebase-core:16.0.0'
 
     implementation "com.android.support:appcompat-v7:$support_version"
     implementation "com.android.support:support-media-compat:$support_version" // used by firebase

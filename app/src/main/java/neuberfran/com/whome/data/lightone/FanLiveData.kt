@@ -6,14 +6,13 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ValueEventListener
-import neuberfran.com.whome.data.lightone.FanState
 import javax.inject.Inject
 
 class FanLiveData @Inject constructor(val firebase: DatabaseReference) : LiveData<FanState>() {
 
     companion object {
         private val TAG = FanLiveData::class.java.simpleName!!
-        private const val FIREBASE_FAN_ON = "fan/on"
+        private const val FIREBASE_ONE_ON = "lightone/on"
     }
 
     private val valueEventListener = object : ValueEventListener {
@@ -29,10 +28,10 @@ class FanLiveData @Inject constructor(val firebase: DatabaseReference) : LiveDat
     }
 
     override fun onActive() {
-        firebase.child(FIREBASE_FAN_ON).addValueEventListener(valueEventListener)
+        firebase.child(FIREBASE_ONE_ON).addValueEventListener(valueEventListener)
     }
 
     override fun onInactive() {
-        firebase.child(FIREBASE_FAN_ON).removeEventListener(valueEventListener)
+        firebase.child(FIREBASE_ONE_ON).removeEventListener(valueEventListener)
     }
 }

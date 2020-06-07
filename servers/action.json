@@ -1,6 +1,6 @@
 {
   "actions": [{
-    "name": "actions.devicesNeuber",
+    "name": "actions.devices",
     "deviceControl": {
     },
     "fulfillment": {
@@ -11,7 +11,7 @@
     "automation" :
     {
       "name": "automation",
-      "url": "<CLOUD_FUNCTION_ENDPOINT>"
+      "url": "https://us-central1-test-f109d.cloudfunctions.net/ha"
     }
   }
 }

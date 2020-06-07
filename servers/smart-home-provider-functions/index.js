@@ -3,7 +3,7 @@ var admin = require("firebase-admin");
 var serviceAccount = require("./serviceAccountKey.json");
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://<PROJECT_ID>.firebaseio.com"
+  databaseURL: "https://test-f109d.firebaseio.com"
 });
 
 exports.ha = function(req, res) {
@@ -43,18 +43,17 @@ function sync(reqdata, res) {
                     "action.devices.traits.OnOff"
                 ],
                 name: {
-                    name: "fan"
+                    name: "lightone"
                 },
                 willReportState: true
             }, {
                 id: "2",
-                type: "action.devices.types.LIGHT",
+                type: "action.devices.types.SWITCH",
                 traits: [
-                    "action.devices.traits.OnOff",
-                    "action.devices.traits.ColorSpectrum"
+                    "action.devices.traits.OnOff"
                 ],
                 name: {
-                    name: "lights"
+                    name: "lighttwo"
                 },
                 willReportState: true
             }]
@@ -70,15 +69,12 @@ function query(reqdata, res) {
             payload: {
                 devices: {
                     "1": {
-                        on: devices.fan.on,
+                        on: devices.lightone.on,
                         online: true
                     },
                     "2": {
-                        on: devices.lights.on,
-                        online: true,
-                        color: {
-                            spectrumRGB: devices.lights.spectrumRGB
-                        }
+                        on: devices.lighttwo.on,
+                        online: true
                     }
                 }
             }
@@ -101,21 +97,13 @@ function execute(reqdata, res) {
                     for (let k = 0; k < curCommand.devices.length; k++) {
                         let curDevice = curCommand.devices[k];
                         if (curDevice.id === "1") {
-                            devices.fan.on = curExec.params.on;
+                            devices.lightone.on = curExec.params.on;
                         } else if (curDevice.id === "2") {
-                            devices.lights.on = curExec.params.on;
+                            devices.lighttwo.on = curExec.params.on;
                         }
                         respCommands.push({ids: [ curDevice.id ], status: "SUCCESS"});
                     }
-                } else if (curExec.command === "action.devices.commands.ColorAbsolute") {
-                    for (let k = 0; k < curCommand.devices.length; k++) {
-                        let curDevice = curCommand.devices[k];
-                        if (curDevice.id === "2") {
-                            devices.lights.spectrumRGB = curExec.params.color.spectrumRGB;
-                        }
-                        respCommands.push({ids: [ curDevice.id ], status: "SUCCESS"});
-                    }
-                }
+                } 
             }
         }
 

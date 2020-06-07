@@ -1,12 +1,13 @@
 {
-  "name": "wHome-androidthings",
+  "name": "wHome things",
   "description": "Sample implementation of a Smart Home cloud function that updates a firebase database",
   "version": "0.0.1",
   "main": "index.js",
   "private": true,
   "license": "Apache-2.0",
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "git://github.com/neuberfran/wHome.git"
   },
   "dependencies": {
     "firebase-admin": "^5.0.0"

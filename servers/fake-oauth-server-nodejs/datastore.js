@@ -2,16 +2,16 @@ const Data = {};
 
 const Auth = {
   clients: {
-    'RKkWfsi0Z9': {
-      clientId: 'RKkWfsi0Z9',
-      clientSecret: 'eToBzeBT7OwrPQO8mZHsZtLp1qhQbe'
+    '721927399999-jcihktnuldpplsrk5dbbl4bdngc68rs1.apps.googleusercontent.com': {
+      clientId: '721927399999-jcihktnuldpplsrk5dbbl4bdngc68rs1.apps.googleusercontent.com',
+      clientSecret: 'TXnxEuxE4RwhwXjemy7E-8xv'
     }
   },
   tokens: {
-    'psokmCxKjfhk7qHLeYd1': {
+    'ya29.GlsfBhuqkmgSgFNZM5zqthBuVLsviTJFvf4Q_x0naROr3LCrUhmWJbhmtBIF18iZQPxyNir-b1G-rS-I4BfrXB6VneTVPJbER4WxvMWinfPapcnER40SokxLQsGP': {
       uid: '1234',
-      accessToken: 'psokmCxKjfhk7qHLeYd1',
-      refreshToken: 'psokmCxKjfhk7qHLeYd1',
+      accessToken: 'ya29.GlsfBhuqkmgSgFNZM5zqthBuVLsviTJFvf4Q_x0naROr3LCrUhmWJbhmtBIF18iZQPxyNir-b1G-rS-I4BfrXB6VneTVPJbER4WxvMWinfPapcnER40SokxLQsGP',
+      refreshToken: 'ya29.GlsfBhuqkmgSgFNZM5zqthBuVLsviTJFvf4Q_x0naROr3LCrUhmWJbhmtBIF18iZQPxyNir-b1G-rS-I4BfrXB6VneTVPJbER4WxvMWinfPapcnER40SokxLQsGP',
       userId: '1234'
     }
   },
@@ -20,7 +20,7 @@ const Auth = {
       uid: '1234',
       name: 'rick',
       password: 'oldman',
-      tokens: ['psokmCxKjfhk7qHLeYd1']
+      tokens: ['ya29.GlsfBhuqkmgSgFNZM5zqthBuVLsviTJFvf4Q_x0naROr3LCrUhmWJbhmtBIF18iZQPxyNir-b1G-rS-I4BfrXB6VneTVPJbER4WxvMWinfPapcnER40SokxLQsGP']
     }
   },
   usernames: {
